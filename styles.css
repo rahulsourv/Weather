@@ -11,7 +11,7 @@
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    background: #e0f7fa; /* optional nice background */
+    background: #e0f7fa; 
   }
   
   .card {
@@ -81,3 +81,35 @@
   .weather{
     display: none;
   }
+  .dark-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ebfffc;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+  }
+  
+  .dark-toggle:hover {
+    background: #d0eaff;
+  }
+  body.dark {
+    background: black;
+  }
+  
+  body.dark .card {
+    background: linear-gradient(grey, black, #36454F);
+    color: #fff;
+  }
+  
+  body.dark .search input,
+  body.dark .search button {
+    background: #444;
+    color: #fff;
+  }
+  
