@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="mode">
+    <button id="dark-mode-toggle" class="dark-toggle">🌙</button>
+
+  </div>
   <div class="card">
     <div class="search">
       <input type="text" placeholder="Enter the name of the city" spellcheck="false" />
@@ -38,6 +42,7 @@
   </div>
 
     <script>
+
 const apiKey ="ec967e11b4426d141af4b787a902d403";
 const apiUrl ="https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 const searchbox = document.querySelector(".search input ");
@@ -95,6 +100,17 @@ searchbox.addEventListener("keypress", function (event) {
 });
 
     </script>
-    
+    <script>
+      const toggleBtn = document.getElementById("dark-mode-toggle");
+
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  // Optional: Change icon depending on mode
+  toggleBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+});
+
+
+    </script>
 </body>
 </html>
